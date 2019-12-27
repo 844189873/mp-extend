@@ -27,7 +27,8 @@ export default [
       data: {
         ex1: '我是extend-test1混入到所有页面中的值'
       },
-      ex1Func() {
+      ex1Func(e) {
+		  log(e);
         log('extend 1： ex1Func 函数被调用了，调用页面是 ', this.__route__)
         return '这是一个来自 extend 1 的函数的返回值'
       },

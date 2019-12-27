@@ -64,6 +64,16 @@ const _App = decorate(App, function (option) {
   option['preprocess'] && option['preprocess'].call(option, option);
 });
 const _Page = decorate(Page, function (option) {
+  const mixins = option.mixins
+  if (Array.isArray(mixins)) {
+	Reflect.deleteProperty(option, 'mixins')
+	// mixin(Page,mixins)
+	mixins.reverse().forEach(mit => {
+		// warning('mit',mit)
+		mixin(base.Page,mit)
+	})
+  }
+  // warning(option)
   mixin(option, base.Page);
   for (const lifeTime of life.Page) {
     option[lifeTime] = decorate(option[lifeTime], ...lifeMixin.Page[lifeTime]);

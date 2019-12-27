@@ -18,6 +18,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
+	"qqappid": "1110069931",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -3,10 +3,14 @@
 const app = getApp()
 
 Page({
-  data: {
+	mixins: [
+		require('../../mp-extend/simple/extend-test-1.js')
+	],
+	
+	data: {
 
-  },
-  onLoad: function () {
-    
-  },
+	},
+	onLoad: function() {
+
+	},
 })

@@ -1,6 +1,9 @@
 import mpExtend from './mp-extend.js'
 
 // 以mpExtend(...)的形式引入多个扩展
+
+//全局的混入
+
 // 如果不需要某一个混入项的功能，直接注释掉即可
 import extendTest from './simple/extend-test.js'
 import extendData from './simple/extend-data.js'
@@ -23,6 +26,7 @@ mpExtend(extendGlobalData);
 mpExtend(extendMitt);
 mpExtend(extendPreload);
 mpExtend(extendOData);
+
 
 // 暴露App、Page、Component构造函数
 export default {
